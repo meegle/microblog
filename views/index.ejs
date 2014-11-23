@@ -1,0 +1,15 @@
+<% include inc/header %>
+<% if (!user) { %>
+<div class="hero-unit">
+	<h1>欢迎来到&nbsp;Microblog</h1>
+	<p>Microblog&nbsp;是一个基于&nbsp;Node.js&nbsp;的微博系统。</p>
+	<p>
+		<a class="btn btn-primary btn-large" href="/login">登录</a>
+		<a class="btn btn-large" href="/reg">立即注册</a>
+	</p>
+</div>
+<% } else { %>
+	<% include post/form %>
+<% } %>
+<% include post/list %>
+<% include inc/footer %>
